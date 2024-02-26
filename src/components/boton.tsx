@@ -12,7 +12,7 @@ function Boton(myBoton : Props) {
     
   return (
     <>
-    <Button variant="success" onClick={() => navigate("/home")}>Entrar</Button>
+    <Button variant="success" onClick={() => navigate("/home")} style={{marginTop:"20px"}}>Entrar</Button>
     </>
   )
 }

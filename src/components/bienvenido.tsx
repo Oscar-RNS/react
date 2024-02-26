@@ -2,18 +2,34 @@ import Boton from './boton';
 import logo from '../logo.svg';
 
 export default function Bienvenido() {
+/*
+ const [user, setUser] = useState('');  
+ const [password, setPassword] = useState(''); 
+ const [formDatos, setFormDatos] = useState('');
+
+ function myUsuario(e : React.ChangeEvent<HTMLInputElement>) {
+  setUser(e.target.value)
+ }
+ function myContrasenia(e : React.ChangeEvent<HTMLInputElement>) {
+  setPassword(e.target.value)
+ } 
+
+ const enviarDatos = (e : React.FormEvent) => {
+    e.preventDefault();   
+    if(user === '' || password === '') {
+      alert('Ingresar Datos !')
+    } else {
+      setFormDatos('Hola : ' + user)
+    }
+ }    
+
+*/
 
   return (
-    <div>
-      <img src={logo} className="App-logo" alt="logo" />        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >         
-        </a>           
-        <h3>Hola, Bienvenido a React !</h3>
+    <div className="App">
+      <header className="App-header">
+       <img src={logo} className="App-logo" alt="logo" style={{width:"250px"}}/>    
+       <h3>Hola, Bienvenido a React !</h3>
         {/*<form action="">
         <label>Usuario </label>
         <input type="text" name="usuario" style={{marginLeft:"14px"}} value={user} onChange={myUsuario}/><br></br>
@@ -24,6 +40,7 @@ export default function Bienvenido() {
        </form>     
        <Usuario formDatos={formDatos}/>*/}
        <Boton/>
+       </header>
       </div>
   )
 }
