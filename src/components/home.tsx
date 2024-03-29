@@ -1,48 +1,50 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { NavLink } from 'react-router-dom';
+import '../App.css';
+import logo from '../logo.svg';
 
-/*interface Props {     
-  formDatos: string;
+
+export default function Home() {
+
+/*const navigate = useNavigate();  
+
+ const [user, setUser] = useState('');  
+ const [password, setPassword] = useState(''); 
+ const [formDatos, setFormDatos] = useState('');
+
+ function myUsuario(e : React.ChangeEvent<HTMLInputElement>) {
+  setUser(e.target.value)
+ }
+ function myContrasenia(e : React.ChangeEvent<HTMLInputElement>) {
+  setPassword(e.target.value)
+ } 
+
+ const enviarDatos = (e : React.FormEvent) => {
+    e.preventDefault();   
+    if(user === '' || password === '') {
+      alert('Ingresar Datos !')
+    } else {
+      setFormDatos('Hola : ' + user)
+    }
+ }    
+
+*/
+
+  return (
+    <div className="App">
+      <header className="App-header">
+       <img src={logo} className="App-logo" alt="logo" style={{width:"250px"}}/>    
+       <h4>Hola, Bienvenido a React !</h4>
+        {/*<form action="">
+        <label>Usuario </label>
+        <input type="text" name="usuario" style={{marginLeft:"14px"}} value={user} onChange={myUsuario}/><br></br>
+        <label>Password </label>
+        <input type="text" name="password" value={password} onChange={myContrasenia}/>
+        <div style={{marginTop:"10px"}}></div>
+         <Boton enviarDatos={enviarDatos}/> 
+       </form>     
+       <Usuario formDatos={formDatos}/>
+       <Button variant="success" onClick={() => navigate("/home")} style={{marginTop:"20px"}}>Entrar</Button>
+       */}
+       </header>
+      </div>
+  )
 }
-
-const Home = ({formDatos} : Props) => {*/
-const Home = () => {    
-    return (
-    <>   
-     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand as={NavLink} to='/'>React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#features">Menu 1</Nav.Link>
-            <Nav.Link href="#pricing">Menu 2</Nav.Link>
-            {/*<NavDropdown title="Menu 3" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Link 1</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-              Link 1
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Link 3</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-              Link 4
-              </NavDropdown.Item>
-              </NavDropdown>*/}
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-    </>
-    ) 
-}
-
-export default Home
