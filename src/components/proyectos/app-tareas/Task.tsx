@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap"
 
-function Tarea() {
+function Task() {
   return (  
     <div className="pt-4">
       <h5>Listado de Tareas</h5>
@@ -8,4 +8,4 @@ function Tarea() {
   )
 }
 
-export default Tarea
+export default Task
