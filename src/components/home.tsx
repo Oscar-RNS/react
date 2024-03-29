@@ -32,7 +32,7 @@ export default function Home() {
     <div className="App">
       <header className="App-header">
        <img src={logo} className="App-logo" alt="logo" style={{width:"250px"}}/>    
-       <h4>Hola, Bienvenido a React !</h4>
+       <h4>¡ Bienvenido a React !</h4>
         {/*<form action="">
         <label>Usuario </label>
         <input type="text" name="usuario" style={{marginLeft:"14px"}} value={user} onChange={myUsuario}/><br></br>
