@@ -1,10 +1,38 @@
-import React from 'react'
+import { Card, ListGroup } from 'react-bootstrap'
+import InputForm from './InputTaskForm'
+import ListTaskForm from './ListTaskForm'
+import { useState } from 'react'
 
 function TaskForm() {
-  return (
-    <div>
-      
-    </div>
+  
+  const [tasks, addTask] = useState(
+      [  
+      {
+        id : 1,
+        name: 'Prueba 1'
+      },
+      {
+        id : 2,
+        name: 'Prueba 2'
+      }
+    ]
+  );
+   
+
+  console.log(tasks);
+
+  return (    
+    <div className="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+      <Card style={{width: '30rem'}}>
+      <Card.Header>Listado de Tareas</Card.Header>
+      <Card.Body>             
+         <InputForm tasks={tasks} addTask={addTask}/>     
+         <ListGroup variant="flush" className='mt-2'>   
+           <ListTaskForm tasks={tasks} />   
+         </ListGroup> 
+      </Card.Body>
+     </Card>
+     </div>
   )
 }
 
