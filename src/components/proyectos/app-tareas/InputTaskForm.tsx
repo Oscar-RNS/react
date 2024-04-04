@@ -5,22 +5,28 @@ import Form from 'react-bootstrap/Form';
 function InputForm({tasks, addTask} : any) {
 
   const [inputTask, inputNameTask] = useState('');
-
-  const handleAddTask = (e: React.ChangeEvent<HTMLInputElement>) => {
+  
+  const handleAddTask = (e: React.ChangeEvent<HTMLInputElement>) => {    
     inputNameTask(e.target.value)
   }
 
   const registerTask = (e: React.FormEvent)  => {
     e.preventDefault();
-    addTask(
-      [
-        ...tasks, 
-        {
-          id : 3,
-          name : inputTask
-        }
-      ]      
-   )
+    if(inputTask == '') 
+    {
+      alert('Ingresa una nueva tarea'); 
+    } else {
+        addTask(
+        [
+          ...tasks, 
+          {
+            id : crypto.randomUUID(),
+            name : inputTask
+          }
+        ]      
+      )
+      inputNameTask('');
+    }
   }
 
   return (

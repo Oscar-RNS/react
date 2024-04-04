@@ -8,11 +8,11 @@ function TaskForm() {
   const [tasks, addTask] = useState(
       [  
       {
-        id : 1,
+        id : crypto.randomUUID(),
         name: 'Prueba 1'
       },
       {
-        id : 2,
+        id : crypto.randomUUID(),
         name: 'Prueba 2'
       }
     ]
