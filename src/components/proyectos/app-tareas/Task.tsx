@@ -1,10 +1,8 @@
-import { Container } from "react-bootstrap"
+import TaskForm from "./TaskForm"
 
 function Task() {
-  return (  
-    <div className="pt-4">
-      <h5>Listado de Tareas</h5>
-    </div>
+  return (   
+      <TaskForm/>   
   )
 }
 
